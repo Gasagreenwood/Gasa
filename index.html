@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(0, 0, 30);
+            overflow-x:auto;
+        }
+        
+        img {
+            width: 100px;
+        }
+        .star {
+            width: 20px;
+            margin-left: 300px;
+            cursor: move;
+        }
+        
+        .main {
+            font-size: 80px;
+            color:white;
+            margin-left: 160px;
+            margin-top: 100px;
+            display: flex;
+            
+            align-items: center;
+        }
+        .thing1 {
+            border-radius: 30px;
+            width: 500px;
+            box-shadow: 4px 4px 4px 6px rgba(255, 100, 255, 0.8);
+            margin-top: 100px;
+        }
+        .container {
+            display: flex;
+            gap: 250px;
+            margin-top: -200px;
+            
+
+        }
+        p {
+            color: white;
+            margin-left: 170px;
+            margin-top: -190px;
+        }
+        .eta {
+            border-radius: 30px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+           
+        }
+        .box {
+            border: 1px solid white;
+            width: 300px;
+            height: 300px;
+            border-radius: 30px;
+            background-color: white;
+            margin-left: 100px;
+            margin-top: 200px;
+            transition: height 0.5s ease;
+            
+        }
+        
+        .box:hover {
+           
+           height: 800px;
+           
+            
+        }
+        .boxp {
+            margin-top: -480px;
+            color:rgb(0, 0, 30);
+            
+            
+            margin-left: 110px;
+        }
+        .container1 {
+            display: flex;
+            
+        }
+        .k {
+            width: 300px;
+            border-radius: 30px;
+        }
+        .box1 {
+            margin-top: 203px;
+            background-color: white;
+            border-radius: 30px;
+            border: 1px solid white;
+            margin-left: 200px;
+            height: 300px;
+            transition: height 0.5s ease;
+
+        }
+        .box1:hover {
+            height: 800px;
+        }
+        .boxp1 {
+            margin-top: -330px;
+            margin-left: 630px;
+            color: black;
+        }
+        .c {
+            width: 300px;
+            border-radius: 30px;
+        }
+
+        .box2 {
+            margin-top: 203px;
+            background-color: white;
+            border-radius: 30px;
+            border: 1px solid white;
+            margin-left: 200px;
+            height: 300px;
+            transition: height 0.5s ease;
+
+        }
+        .box2:hover {
+            height: 800px;
+        }
+        .boxp2 {
+            margin-top: -150px;
+            margin-left: 1110px;
+            color: rgb(0, 0, 30);
+        }
+        #draggable-img {
+            width: 10px;
+            cursor: move;
+            margin-left: 30px;
+            margin-left: 300px;
+        }
+        #draggable-img1 {
+            width: 10px;
+            height: 10px;
+        }
+        #draggable-img2{
+            width: 10px;
+            height: 10px;
+            
+        }
+        #draggable-img3{
+            width: 10px;
+            height: 10px;
+        }
+        #draggable-img4{
+            width: 10px;
+            margin-left: 100px;
+            height: 10px;
+        }
+        #draggable-img5 {
+            width: 10px;
+            margin-left: 300px;
+            margin-top: 90px;
+            height: 10px;
+        }
+        #draggable-img6{
+            width: 10px;
+            height: 10px;
+        }
+        #draggable-img7{
+            width: 10px;
+            height: 10px;
+        }
+        #draggable-img8{
+            width: 10px;
+            height: 10px;
+        }
+        #draggable-img9{
+            width: 10px;
+            height: 10px;
+        }
+        #draggable-img10 {
+            width: 10px;
+            height: 10px;
+        }
+        #draggable-img11 {
+            width: 10px;
+            height: 10px;
+            margin-left: 300px;
+            margin-top: 30px;
+        }
+        #draggable-img12 {
+            width: 10px;
+            height: 10px;
+            margin-top: -100px;
+            margin-left: 600px;
+        }
+        #draggable-img13 {
+            width: 10px;
+            height: 10px;
+            margin-top: 0px;
+            margin-right: 30px;
+        }
+        #draggable-img14 {
+            width: 10px;
+            height: 10px;
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        .container2 {
+            display: flex;
+            gap: 100px;
+            position: absolute;
+        }
+        h2 {
+            color: white;
+            margin-left: -100px;
+            text-align: center;
+            margin-top: 200px;
+        }
+        .infop {
+            margin-top: 30px;
+            margin-left: -0px;
+        }
+        .info {
+            width: 900px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 350px;
+        }
+        
+        
+    </style>
+
+<div class="container2">
+<img src="star.webp" alt="" id="draggable-img2" draggable="true">
+<img src="star.webp" alt="" id="draggable-img4" draggable="true">
+<img src="star.webp" alt="" id="draggable-img5" draggable="true">
+
+</div>
+ <nav>
+  <ul><img class = "thing"src="thing.webp" alt=""></ul>
+ </nav>
+ <img src="star.webp" alt="" id="draggable-img1" draggable="true">
+ <img src="star.webp" alt="" id="draggable-img" draggable="true">
+
+ <div class="container">
+ <h1 class="main">C<img src="star.webp" alt="" id="draggable-img3" draggable="true">
+    a<img src="star.webp" alt="" id="draggable-img3" draggable="true">
+    ri<img src="star.webp" alt="" id="draggable-img3" draggable="true">
+    n<img src="star.webp" alt="" id="draggable-img3" draggable="true">
+    a N<img src="star.webp" alt="" id="draggable-img3" draggable="true">
+    e<img src="star.webp" alt="" id="draggable-img3" draggable="true">
+    b<img src="star.webp" alt="" id="draggable-img3" draggable="true">
+    u<img src="star.webp" alt="" id="draggable-img3" draggable="true">
+    l<img src="star.webp" alt="" id="draggable-img3" draggable="true">
+    a</h1>
+ <img class="thing1" src="thing1.webp" alt="">
+ 
+ </div>
+ 
+ <img src="star.webp" alt="" id="draggable-img" draggable="true">
+
+ <p><img src="star.webp" alt="" id="draggable-img3" draggable="true">
+
+    Human missions <img src="star.webp" alt="" id="draggable-img3" draggable="true">
+    to the Carina Nebula have been a staple of<br> 
+    science fiction <img src="star.webp" alt="" id="draggable-img3" draggable="true">
+    literature since the 1840s and have <img src="star.webp" alt="" id="draggable-img3" draggable="true">
+    also been<br> 
+    a topic of interest in the field of <img src="star.webp" alt="" id="draggable-img3" draggable="true">
+    aerospace engineering.</p>
+ <div class="container1">   
+<div class="box">
+    <img src="eta.webp" alt="" class="eta">
+   
+</div>
+
+
+<div class="box1">
+    <img src="hom.webp" alt="" class="k">
+</div>
+<div class="box2">
+    <img src="ca.webp" alt="" class="c">
+</div>
+</div>
+<div class="container2">
+<img src="star.webp" alt="" id="draggable-img5" draggable="true">
+<img src="star.webp" alt="" id="draggable-img10" draggable="true">
+<img src="star.webp" alt="" id="draggable-img11" draggable="true">
+<img src="star.webp" alt="" id="draggable-img12" draggable="true">
+<img src="star.webp" alt="" id="draggable-img13" draggable="true">
+<img src="star.webp" alt="" id="draggable-img14" draggable="true">
+<img src="star.webp" alt="" id="draggable-img15" draggable="true">
+<img src="star.webp" alt="" id="draggable-img16" draggable="true">
+<img src="star.webp" alt="" id="draggable-img17" draggable="true">
+<img src="star.webp" alt="" id="draggable-img18" draggable="true">
+</div>
+<p class="boxp">Eta Carinae, the most notable star within <br>the Carina Nebula, is recognized as the <br>brightest lunminous object in our galaxy, <br>shining 400 million times brighter than <br>the sun.<br><br> Eta Carinae experienced a massive <br>eruption in the 1840s, becoming one of <br>the brightest stars in the sky and <br>leading to the formation of the <br>Homunculus Nebula within the Carina <br>Nebula.<br><br> Eta Carinae is classified as a "supernova <br>imposter," experiencing a massive <br>explosion without being destroyed, which <br>constrasts with a full supernova event.</p>
+<p class="boxp1">Homunculus Nebula, a smaller <br>nebula within the Carina Nebula, often <br>referred to as “the little man” nebula. <br><br> The Homonculus Nebula is 7,500 light <br>years (2,300 parsecs) away from Earth. <br><br> The Homunculus Nebula was formed <br>when the Eta Carinae erupted</p>
+<p class="boxp2">The Carina Nebula, also known as the <br>Great Nebula is a vast and intricate <br>interstellar cloud located 8,500 light years <br>away from earth. The Carina Nebula was <br>discovered by a French astronomer Abbe <br>Nicolas-Louis de Lacialle<br><br> This nebula is a stellar nursery, rich in <br>gas and dust, and renowned for its <br>spectacular beauty and <br>complex structures.<br><br> Other famous features within the Carina <br>Nebula include the Keyhole Nebula, <br>Mystic Mountain, Bochum 10 and 11. <br>These features along with the nebula's <br>ability to shed mass equivilent to the <br>size and mass of Jupiter every year <br>through stellar wind gusts.</p>
+<div class="info">
+<h2>More Information</h2>
+<p class="infop">At the heart of the Carina Nebula lies Eta Carinae, its most notable star, which is famous for being the brightest luminous object known in our galaxy. Eta Carinae stands out due to an event in the 1840s when it underwent a significant eruption, becoming one of the brightest stars in the sky. This eruption, which ejected a massive amount of material, led to the formation of the Homunculus Nebula, a smaller nebula within the Carina Nebula, often referred to as “the little man” nebula. The exact cause of Eta Carinae's eruption remains a subject of study, but it provides valuable insights into the volatile late stages of massive star evolution. Classified as a “supernova imposter,” Eta Carinae experienced a massive explosion without being destroyed, contrasting with a full supernova event. This phenomenon has contributed to our understanding of the instability in very massive stars and the mechanisms that precede supernova explosions. Eta Carinae is estimated to be 100 times bigger than our sun and is 400 million times brighter than the sun, making it an object of significant interest in astronomical studies.
+</p>
+</div>
+<script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var box = document.querySelector('.box');
+        var boxp = document.querySelector('.boxp');
+        
+        box.addEventListener('mouseover', function() {
+            boxp.style.opacity = 1;
+        });
+
+        box.addEventListener('mouseout', function() {
+            boxp.style.opacity = 0;
+        });
+    });
+    //box1p
+    document.addEventListener('DOMContentLoaded', function () {
+        var box = document.querySelector('.box1');
+        var boxp = document.querySelector('.boxp1');
+        
+        box.addEventListener('mouseover', function() {
+            boxp.style.opacity = 1;
+        });
+
+        box.addEventListener('mouseout', function() {
+            boxp.style.opacity = 0;
+        });
+    });
+    
+    
+</script>
+</body>
+</html>
